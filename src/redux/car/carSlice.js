@@ -41,7 +41,7 @@ const advertsSlice = createSlice({
       .addCase(getCarsThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.cars = [...state.cars, ...action.payload];
+        state.cars = action.payload;
       })
 
       .addMatcher(isAnyOf(getCarsThunk.pending), handlePending)
