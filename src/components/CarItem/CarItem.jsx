@@ -67,7 +67,7 @@ export const CarItem = ({ car }) => {
       </Button>
       {isOpen && (
         <Modal onClose={closeModal}>
-          <CarInfo car={car} />
+          <CarInfo data={{ car, city, country }} />
         </Modal>
       )}
     </Item>

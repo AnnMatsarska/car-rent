@@ -12,14 +12,21 @@ export const Backdrop = styled.div`
 
 export const StyledModal = styled.div`
   position: relative;
+
+  padding: 40px 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+`;
+export const Container = styled.div`
   width: 541px;
   height: 752px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px 40px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 24px;
+  position: absolute;
+
+  max-height: calc(100vh - 20px);
+  overflow: auto;
 `;
 
 export const Content = styled.div`

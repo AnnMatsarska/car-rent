@@ -1,5 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { Backdrop, StyledModal, Content, BtnClose } from './Modal.styled';
+import {
+  Backdrop,
+  StyledModal,
+  Content,
+  BtnClose,
+  Container,
+} from './Modal.styled';
 import closeIcon from '../../icons/close.svg';
 import { createPortal } from 'react-dom';
 
@@ -31,12 +37,14 @@ export const Modal = ({ children, onClose }) => {
 
   return createPortal(
     <Backdrop>
-      <StyledModal ref={modalRef} onClick={event => event.stopPropagation()}>
-        <BtnClose onClick={() => onClose(false)}>
-          <img src={closeIcon} width={24} alt="Close" />
-        </BtnClose>
-        <Content>{children}</Content>
-      </StyledModal>
+      <Container>
+        <StyledModal ref={modalRef} onClick={event => event.stopPropagation()}>
+          <BtnClose onClick={() => onClose(false)}>
+            <img src={closeIcon} width={24} alt="Close" />
+          </BtnClose>
+          <Content>{children}</Content>
+        </StyledModal>
+      </Container>
     </Backdrop>,
     modalRoot
   );
