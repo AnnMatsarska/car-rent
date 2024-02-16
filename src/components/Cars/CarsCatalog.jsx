@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getCarsThunk } from 'redux/car/operation';
 
 import { CarItem } from '../CarItem/CarItem';
 import { CarList, Container } from './CarsCatalog.styled';
+import { selectIsLoading } from 'redux/car/selectors';
+import { Loader } from 'components/Loader/Loader';
 
 export const CarsCatalog = ({ cars }) => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [isLastPage, setIsLastPage] = useState(false);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(
@@ -36,6 +39,7 @@ export const CarsCatalog = ({ cars }) => {
           return <CarItem key={car.id} car={car} />;
         })}
       </CarList>
+      {isLoading && <Loader />}
       {!isLastPage && cars.length > 0 && (
         <button type="button" onClick={handleLoadMore}>
           Load More

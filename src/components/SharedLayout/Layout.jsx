@@ -9,15 +9,17 @@ export const Layout = () => {
   return (
     <StyledLayout>
       <Header />
-      <Suspense
-        fallback={
-          <Container>
-            <Loader />
-          </Container>
-        }
-      >
-        <Outlet />
-      </Suspense>
+      <main>
+        <Suspense
+          fallback={
+            <Container>
+              <Loader />
+            </Container>
+          }
+        >
+          <Outlet />
+        </Suspense>
+      </main>
     </StyledLayout>
   );
 };

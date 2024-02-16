@@ -6,7 +6,7 @@ export const Loader = () => {
       height="80"
       width="80"
       radius="9"
-      color="#3f51b5"
+      color="var(--secondary-color-blue)"
       ariaLabel="three-dots-loading"
       wrapperStyle={{
         justifyContent: 'center',
