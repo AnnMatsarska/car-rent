@@ -17,6 +17,7 @@ export const Container = styled.div`
 export const Button = styled.button`
   display: block;
   margin-top: 100px;
+  margin-bottom: 70px;
   margin-left: auto;
   margin-right: auto;
 

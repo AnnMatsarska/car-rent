@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { ReactComponent as NormalHeart } from '../../icons/normalHeart.svg';
+import { ReactComponent as ActiveHeart } from '../../icons/activeHeart.svg';
 
 export const Item = styled.li`
   display: block;
@@ -12,6 +14,28 @@ export const Img = styled.img`
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 14px;
+`;
+
+export const BtnHeart = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+`;
+
+export const NormalHeartIcon = styled(NormalHeart)`
+  &:hover {
+    fill: #3470ff;
+  }
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+`;
+
+export const ActiveHeartIcon = styled(ActiveHeart)`
+  cursor: pointer;
 `;
 
 export const CarTitle = styled.div`
