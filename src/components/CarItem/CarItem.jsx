@@ -6,6 +6,7 @@ import {
   CarTextSpan,
   CarTextSubTitle,
   CarTextSubSpan,
+  Button,
 } from './CarItem.styled';
 
 export const CarItem = ({ car }) => {
@@ -46,6 +47,7 @@ export const CarItem = ({ car }) => {
         <CarTextSubSpan>{mileage}</CarTextSubSpan>
         <CarTextSubSpan>{functionalities[0]}</CarTextSubSpan>
       </CarTextSubTitle>
+      <Button type="button">Learn more</Button>
     </Item>
   );
 };

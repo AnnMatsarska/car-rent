@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCarsThunk } from 'redux/car/operation';
 
 import { CarItem } from '../CarItem/CarItem';
-import { CarList, Container } from './CarsCatalog.styled';
+import { CarList, Container, Button } from './CarsCatalog.styled';
 import { selectIsLoading } from 'redux/car/selectors';
 import { Loader } from 'components/Loader/Loader';
 
@@ -41,9 +41,9 @@ export const CarsCatalog = ({ cars }) => {
       </CarList>
       {isLoading && <Loader />}
       {!isLastPage && cars.length > 0 && (
-        <button type="button" onClick={handleLoadMore}>
-          Load More
-        </button>
+        <Button type="button" onClick={handleLoadMore}>
+          Load more
+        </Button>
       )}
     </Container>
   );
