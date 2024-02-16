@@ -9,6 +9,7 @@ import {
   WrappTitle,
   Conditions,
   Condition,
+  BtnTel,
 } from './CarInfo.styled';
 
 export const CarInfo = ({ data }) => {
@@ -95,6 +96,7 @@ export const CarInfo = ({ data }) => {
           </span>
         </Condition>
       </Conditions>
+      <BtnTel href="tel:+380730000000">Rental car</BtnTel>
     </>
   );
 };

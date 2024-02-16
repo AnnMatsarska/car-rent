@@ -63,6 +63,7 @@ export const Conditions = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 24px;
 `;
 
 export const Condition = styled.li`
@@ -75,4 +76,15 @@ export const Condition = styled.li`
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -2%;
+`;
+export const BtnTel = styled.a`
+  display: inline-block;
+  padding: 12px 50px;
+  border-radius: 12px;
+  background: var(--primary-color-blue);
+
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
 `;
