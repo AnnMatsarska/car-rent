@@ -3,9 +3,9 @@ import { fetchAllCars } from 'services/rentCarApi';
 
 export const getCarsThunk = createAsyncThunk(
   'cars/fetchAll',
-  async (_, thunkAPI) => {
+  async ({ page, limit }, thunkAPI) => {
     try {
-      const response = await fetchAllCars();
+      const response = await fetchAllCars(page, limit);
       return response;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

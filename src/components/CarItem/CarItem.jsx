@@ -1,7 +1,9 @@
+import { Item, Img } from './CarItem.styled';
+
 export const CarItem = ({ car }) => {
   return (
-    <li>
-      <img src={car.img} alt="Car" />
-    </li>
+    <Item>
+      <Img src={car.img} alt="Car" />
+    </Item>
   );
 };
