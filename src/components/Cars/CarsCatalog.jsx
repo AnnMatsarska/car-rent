@@ -4,16 +4,16 @@ import { getCarsThunk } from 'redux/car/operation';
 
 import { CarItem } from '../CarItem/CarItem';
 import { CarList, Container, Button } from './CarsCatalog.styled';
-import { selectIsLoading } from 'redux/car/selectors';
+import { selectCars, selectIsLoading } from 'redux/car/selectors';
 import { Loader } from 'components/Loader/Loader';
 
-export const CarsCatalog = ({ cars }) => {
+export const CarsCatalog = () => {
+  const cars = useSelector(selectCars);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
- 
+
   const [isLastPage, setIsLastPage] = useState(false);
   const isLoading = useSelector(selectIsLoading);
- 
 
   useEffect(() => {
     dispatch(
