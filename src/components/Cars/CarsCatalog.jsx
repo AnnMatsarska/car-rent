@@ -10,8 +10,10 @@ import { Loader } from 'components/Loader/Loader';
 export const CarsCatalog = ({ cars }) => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
+ 
   const [isLastPage, setIsLastPage] = useState(false);
   const isLoading = useSelector(selectIsLoading);
+ 
 
   useEffect(() => {
     dispatch(
