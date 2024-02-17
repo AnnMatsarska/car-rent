@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCarsThunk } from 'redux/car/operation';
+import { resetStateCars } from 'redux/car/carSlice';
 
 import { CarItem } from '../CarItem/CarItem';
 import { CarList, Container, Button } from './CarsCatalog.styled';
@@ -23,6 +24,12 @@ export const CarsCatalog = () => {
       })
     );
   }, [dispatch, page]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(resetStateCars());
+    };
+  }, [dispatch]);
 
   const handleLoadMore = () => {
     setPage(prev => (prev += 1));

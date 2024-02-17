@@ -35,6 +35,11 @@ const advertsSlice = createSlice({
         );
       },
     },
+    resetStateCars: {
+      reducer(state) {
+        state.cars = [];
+      },
+    },
   },
   extraReducers: builder =>
     builder
@@ -48,5 +53,6 @@ const advertsSlice = createSlice({
       .addMatcher(isAnyOf(getCarsThunk.rejected), handleRejected),
 });
 
-export const { addFavoriteCar, deleteFavoriteCar } = advertsSlice.actions;
+export const { addFavoriteCar, deleteFavoriteCar, resetStateCars } =
+  advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;
