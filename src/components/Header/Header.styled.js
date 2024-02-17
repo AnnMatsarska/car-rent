@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
 
 export const StyledContainer = styled.div`
   max-width: 1440px;
-  padding: 12px 112px;
+  padding: 20px 112px;
 `;
 
 export const StyledList = styled.ul`
@@ -16,13 +16,13 @@ export const StyledList = styled.ul`
   height: 44px;
   align-items: center;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 68px;
 `;
 export const StyledNavLink = styled(NavLink)`
   padding: 14px 44px;
   color: black;
 
-  background-color: var(--secondary-color-white);
+  background-color: rgba(18, 20, 23, 0.1);
   border: none;
   border-radius: 12px;
 
@@ -32,7 +32,8 @@ export const StyledNavLink = styled(NavLink)`
 
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 8px;
     transform: translateY(-2px);
   }

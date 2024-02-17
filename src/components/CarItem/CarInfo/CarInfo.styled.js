@@ -45,14 +45,14 @@ export const CarTextSubSpan = styled.span`
 `;
 
 export const CarDescription = styled.p`
-  margin-top: 14px;
+  margin-top: 10px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
 `;
 
 export const WrappTitle = styled.p`
-  margin-top: 24px;
+  margin-top: 20px;
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
@@ -63,19 +63,18 @@ export const Conditions = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 `;
 
 export const Condition = styled.li`
   display: inline-block;
   padding: 7px 14px 7px 14px;
   border-radius: 35px;
-  background: rgb(249, 249, 249);
+  background-color: rgb(249, 249, 249);
 
   font-size: 12px;
-  font-weight: 400;
+
   line-height: 1.5;
-  letter-spacing: -2%;
 `;
 export const BtnTel = styled.a`
   display: inline-block;
@@ -87,4 +86,10 @@ export const BtnTel = styled.a`
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-color-blue);
+  }
 `;

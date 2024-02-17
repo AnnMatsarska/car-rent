@@ -13,7 +13,7 @@ export const Backdrop = styled.div`
 export const StyledModal = styled.div`
   position: relative;
 
-  padding: 40px 40px;
+  padding: 40px;
   background-color: rgb(255, 255, 255);
   border-radius: 24px;
 `;
@@ -25,13 +25,11 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
   position: absolute;
 
-  max-height: calc(100vh - 20px);
+  max-height: 100vh;
   overflow: auto;
 `;
 
-export const Content = styled.div`
-  margin-top: 24px;
-`;
+export const Content = styled.div``;
 
 export const BtnClose = styled.button`
   position: absolute;
@@ -40,12 +38,13 @@ export const BtnClose = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  top: 36px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   width: 24px;
   height: 24px;
   border: none;
   background-color: transparent;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
   &: hover {
     scale: 1.2;

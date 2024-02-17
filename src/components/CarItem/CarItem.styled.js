@@ -96,7 +96,8 @@ export const Button = styled.button`
   font-weight: 600;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--secondary-color-blue);
   }
 `;
