@@ -9,7 +9,7 @@ export const Section = styled.section`
   background-image: url(${bgimage});
   background-repeat: no-repeat;
   background-size: 1000px;
-  background-position: 170% 30%;
+  background-position: 170% 50%;
 `;
 
 export const TitleWrapper = styled.div``;
