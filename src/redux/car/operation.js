@@ -15,7 +15,7 @@ export const getCarsThunk = createAsyncThunk(
 );
 
 export const fetchByBrandThunk = createAsyncThunk(
-  'adverts/fetchByBrand',
+  'cars/fetchByBrand',
   async ({ brand, price, mileageFrom, mileageTo }, thunkAPI) => {
     try {
       const response = await fetchByBrand({

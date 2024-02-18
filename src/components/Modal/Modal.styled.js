@@ -29,8 +29,6 @@ export const Container = styled.div`
   overflow: auto;
 `;
 
-export const Content = styled.div``;
-
 export const BtnClose = styled.button`
   position: absolute;
   display: flex;

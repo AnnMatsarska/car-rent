@@ -98,6 +98,7 @@ export const BtnSearch = styled.button`
   border-radius: 12px;
   margin-top: 28px;
   background: var(--primary-color-blue);
+
   color: white;
   font-weight: 600;
   line-height: 1.43;
@@ -138,6 +139,7 @@ export const InvalidMessage = styled.p`
   left: 0;
   width: 100%;
   transform: translateY(100%);
+
   font-size: 10px;
   color: red;
 `;

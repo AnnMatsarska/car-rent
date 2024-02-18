@@ -1,13 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import {
-  Backdrop,
-  StyledModal,
-  Content,
-  BtnClose,
-  Container,
-} from './Modal.styled';
-import closeIcon from '../../icons/close.svg';
 import { createPortal } from 'react-dom';
+import React, { useEffect, useRef } from 'react';
+import { Backdrop, StyledModal, BtnClose, Container } from './Modal.styled';
+import closeIcon from '../../icons/close.svg';
 
 const modalRoot = document.querySelector('#root-modal');
 
@@ -42,7 +36,7 @@ export const Modal = ({ children, onClose }) => {
           <BtnClose onClick={() => onClose(false)}>
             <img src={closeIcon} width={24} alt="Close" />
           </BtnClose>
-          <Content>{children}</Content>
+          <div>{children}</div>
         </StyledModal>
       </Container>
     </Backdrop>,

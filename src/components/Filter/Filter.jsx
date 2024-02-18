@@ -1,13 +1,14 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
 import { selectFilters } from 'redux/filter/filterSelector';
 import { setCarFilters } from 'redux/filter/filterSlice';
 
 import { generateDropdownPrice } from 'utils/generatePrices';
 import { makes } from 'data/makes';
-import { Dropdown } from 'components/Dropdown/Dropdown';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { useSearchParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Dropdown } from 'components/Dropdown/Dropdown';
 import {
   BtnSearch,
   CustomArrow,

@@ -46,6 +46,7 @@ export const CarTextSubSpan = styled.span`
 
 export const CarDescription = styled.p`
   margin-top: 10px;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
@@ -54,6 +55,7 @@ export const CarDescription = styled.p`
 export const WrappTitle = styled.p`
   margin-top: 20px;
   margin-bottom: 8px;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
@@ -69,16 +71,17 @@ export const Conditions = styled.ul`
 export const Condition = styled.li`
   display: inline-block;
   padding: 7px 14px 7px 14px;
+
   border-radius: 35px;
   background-color: rgb(249, 249, 249);
 
   font-size: 12px;
-
   line-height: 1.5;
 `;
 export const BtnTel = styled.a`
   display: inline-block;
   padding: 12px 50px;
+
   border-radius: 12px;
   background: var(--primary-color-blue);
 

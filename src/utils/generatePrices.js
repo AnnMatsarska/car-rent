@@ -1,4 +1,4 @@
-export function generateDropdownPrice(min, max, step) {
+export const generateDropdownPrice = (min, max, step) => {
   const price = [];
 
   for (let i = min; i <= max; i += step) {
@@ -6,4 +6,4 @@ export function generateDropdownPrice(min, max, step) {
   }
 
   return price;
-}
+};

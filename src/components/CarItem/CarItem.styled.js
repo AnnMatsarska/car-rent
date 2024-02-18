@@ -27,11 +27,12 @@ export const BtnHeart = styled.button`
 `;
 
 export const NormalHeartIcon = styled(NormalHeart)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
   &:hover {
     fill: #3470ff;
   }
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
 `;
 
 export const ActiveHeartIcon = styled(ActiveHeart)`

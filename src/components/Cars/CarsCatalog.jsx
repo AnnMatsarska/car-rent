@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
+
 import { getCarsThunk, fetchByBrandThunk } from 'redux/car/operation';
 import { resetStateCars, loadPage } from 'redux/car/carSlice';
-import { useSearchParams } from 'react-router-dom';
+import { selectCars, selectIsLoading, selectPage } from 'redux/car/selectors';
 
 import { CarItem } from '../CarItem/CarItem';
 import { CarList, Container, Button } from './CarsCatalog.styled';
-import { selectCars, selectIsLoading, selectPage } from 'redux/car/selectors';
 import { Loader } from 'components/Loader/Loader';
 
 export const CarsCatalog = () => {

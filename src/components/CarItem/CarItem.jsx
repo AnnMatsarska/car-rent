@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import {
   Item,
   Img,
@@ -14,7 +16,7 @@ import {
 } from './CarItem.styled';
 import { Modal } from 'components/Modal/Modal';
 import { CarInfo } from './CarInfo/CarInfo';
-import { useDispatch, useSelector } from 'react-redux';
+
 import { selectFavoritesAdverts } from 'redux/car/selectors';
 import { addFavoriteCar, deleteFavoriteCar } from '../../redux/car/carSlice';
 

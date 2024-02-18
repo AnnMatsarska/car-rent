@@ -10,6 +10,7 @@ export const CarList = styled.ul`
 
 export const EmptyFavText = styled.p`
   margin-top: 50px;
+
   text-align: center;
   font-size: 30px;
   font-weight: 600;
