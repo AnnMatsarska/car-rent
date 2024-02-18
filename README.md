@@ -1,4 +1,4 @@
-# "Rent and Drive" - Rental service application
+# "Rent and Drive" - Car rental service application
 
 ## About the project:
 
