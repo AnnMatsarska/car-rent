@@ -1,7 +1,5 @@
 # "Rent and Drive" - Rental service application
 
-# Unlock Your Journey: Welcome to Rent and Drive!
-
 ## About the project:
 
 This rental service app written in JS in combination with React JS allows users
