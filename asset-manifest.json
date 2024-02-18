@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/car-rent/static/css/main.9f54aa0e.css",
-    "main.js": "/car-rent/static/js/main.2dd752c0.js",
+    "main.css": "/car-rent/static/css/main.f8b4d785.css",
+    "main.js": "/car-rent/static/js/main.f77b53cb.js",
     "static/js/658.d1cbb9fa.chunk.js": "/car-rent/static/js/658.d1cbb9fa.chunk.js",
-    "static/js/28.1e1d3838.chunk.js": "/car-rent/static/js/28.1e1d3838.chunk.js",
+    "static/js/28.ceb913a4.chunk.js": "/car-rent/static/js/28.ceb913a4.chunk.js",
     "static/js/812.b52337be.chunk.js": "/car-rent/static/js/812.b52337be.chunk.js",
     "static/js/381.9d16513a.chunk.js": "/car-rent/static/js/381.9d16513a.chunk.js",
     "static/media/car.png": "/car-rent/static/media/car.faad87e61f05f5d34d4d.png",
@@ -15,15 +15,15 @@
     "static/media/activeHeart.svg": "/car-rent/static/media/activeHeart.97847e9195943f61800c97807e735d4f.svg",
     "static/media/close.svg": "/car-rent/static/media/close.9c5966fd1a8180e43c4811c8a64904ea.svg",
     "static/media/arrow.svg": "/car-rent/static/media/arrow.24cd320d509ea2ebbeb4265f8030bafb.svg",
-    "main.9f54aa0e.css.map": "/car-rent/static/css/main.9f54aa0e.css.map",
-    "main.2dd752c0.js.map": "/car-rent/static/js/main.2dd752c0.js.map",
+    "main.f8b4d785.css.map": "/car-rent/static/css/main.f8b4d785.css.map",
+    "main.f77b53cb.js.map": "/car-rent/static/js/main.f77b53cb.js.map",
     "658.d1cbb9fa.chunk.js.map": "/car-rent/static/js/658.d1cbb9fa.chunk.js.map",
-    "28.1e1d3838.chunk.js.map": "/car-rent/static/js/28.1e1d3838.chunk.js.map",
+    "28.ceb913a4.chunk.js.map": "/car-rent/static/js/28.ceb913a4.chunk.js.map",
     "812.b52337be.chunk.js.map": "/car-rent/static/js/812.b52337be.chunk.js.map",
     "381.9d16513a.chunk.js.map": "/car-rent/static/js/381.9d16513a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f54aa0e.css",
-    "static/js/main.2dd752c0.js"
+    "static/css/main.f8b4d785.css",
+    "static/js/main.f77b53cb.js"
   ]
 }
