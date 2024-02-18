@@ -31,12 +31,12 @@ export const CarsCatalog = () => {
     }
 
     const filters = {};
-
     searchParams.forEach((value, key) => (filters[key] = value));
-
     dispatch(fetchByBrandThunk(filters));
+
     return () => {
       dispatch(resetStateCars());
+      setIsLastPage(false);
     };
   }, [dispatch, page, searchParams]);
 

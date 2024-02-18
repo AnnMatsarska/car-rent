@@ -36,8 +36,10 @@ const advertsSlice = createSlice({
         );
       },
     },
-    loadPage(state) {
-      state.page = state.page + 1;
+    loadPage: {
+      reducer(state) {
+        state.page = state.page + 1;
+      },
     },
     resetStateCars: {
       reducer(state) {
