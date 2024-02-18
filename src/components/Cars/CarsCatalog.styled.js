@@ -34,3 +34,19 @@ export const Button = styled.button`
     color: var(--secondary-color-blue);
   }
 `;
+
+export const NoResults = styled.h2`
+  display: block;
+  width: 265px;
+
+  margin-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+
+  color: var(--primary-color-blue);
+`;

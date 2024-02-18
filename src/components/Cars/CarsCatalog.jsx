@@ -7,7 +7,7 @@ import { resetStateCars, loadPage } from 'redux/car/carSlice';
 import { selectCars, selectIsLoading, selectPage } from 'redux/car/selectors';
 
 import { CarItem } from '../CarItem/CarItem';
-import { CarList, Container, Button } from './CarsCatalog.styled';
+import { CarList, Container, Button, NoResults } from './CarsCatalog.styled';
 import { Loader } from 'components/Loader/Loader';
 
 export const CarsCatalog = () => {
@@ -60,11 +60,17 @@ export const CarsCatalog = () => {
   return (
     <section>
       <Container>
-        <CarList>
-          {cars.map(car => {
-            return <CarItem key={car.id} car={car} />;
-          })}
-        </CarList>
+        {cars.length !== 0 ? (
+          <CarList>
+            {cars.map(car => {
+              return <CarItem key={car.id} car={car} />;
+            })}
+          </CarList>
+        ) : (
+          <NoResults>
+            Oops, no matches! Let's narrow it down for your perfect drive.
+          </NoResults>
+        )}
         {isLoading && <Loader />}
         {!isLastPage && cars.length > 0 && (
           <Button type="button" onClick={handleLoadMore}>
