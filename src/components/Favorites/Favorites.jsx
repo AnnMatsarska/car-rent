@@ -10,17 +10,19 @@ export const Favorites = () => {
   const favorites = useSelector(selectFavoritesAdverts);
 
   return (
-    <Container>
-      {favorites.length !== 0 ? (
-        <CarList>
-          {favorites.map(car => {
-            return <CarItem key={car.id} car={car} />;
-          })}
-        </CarList>
-      ) : (
-        <EmptyFavText>Please, select your favourite cars!</EmptyFavText>
-      )}
-      {isLoading && <Loader />}
-    </Container>
+    <section>
+      <Container>
+        {favorites.length !== 0 ? (
+          <CarList>
+            {favorites.map(car => {
+              return <CarItem key={car.id} car={car} />;
+            })}
+          </CarList>
+        ) : (
+          <EmptyFavText>Please, select your favourite cars!</EmptyFavText>
+        )}
+        {isLoading && <Loader />}
+      </Container>
+    </section>
   );
 };

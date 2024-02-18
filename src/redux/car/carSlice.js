@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { getCarsThunk } from './operation';
+import { fetchByBrandThunk, getCarsThunk } from './operation';
 
 const carsInitialState = {
   cars: [],
@@ -48,9 +48,20 @@ const advertsSlice = createSlice({
         state.error = null;
         state.cars = [...state.cars, ...action.payload];
       })
+      .addCase(fetchByBrandThunk.fulfilled, (state, action) => {
+        state.cars = action.payload;
+        state.isLoading = false;
+        state.error = null;
+      })
 
-      .addMatcher(isAnyOf(getCarsThunk.pending), handlePending)
-      .addMatcher(isAnyOf(getCarsThunk.rejected), handleRejected),
+      .addMatcher(
+        isAnyOf(getCarsThunk.pending, fetchByBrandThunk.pending),
+        handlePending
+      )
+      .addMatcher(
+        isAnyOf(getCarsThunk.rejected, fetchByBrandThunk.rejected),
+        handleRejected
+      ),
 });
 
 export const { addFavoriteCar, deleteFavoriteCar, resetStateCars } =

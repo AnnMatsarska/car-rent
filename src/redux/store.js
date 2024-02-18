@@ -13,6 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { advertsReducer } from './car/carSlice';
+import { filterReducer } from './filter/filterSlice';
 
 const advertsConfig = {
   key: 'adverts',
@@ -22,6 +23,7 @@ const advertsConfig = {
 
 const rootReducer = combineReducers({
   adverts: persistReducer(advertsConfig, advertsReducer),
+  filters: filterReducer,
 });
 
 export const store = configureStore({
