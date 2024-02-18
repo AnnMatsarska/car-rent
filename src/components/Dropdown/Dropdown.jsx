@@ -1,21 +1,28 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { DropdownStyled } from './Dropdown.styled';
 
 export const Dropdown = ({ close, children }) => {
+  const formRef = useRef(null);
   useEffect(() => {
     const closeDropdownEsc = ({ code }) => {
       if (code === 'Escape') {
         close();
       }
     };
+    const handleClose = event => {
+      if (formRef.current && !formRef.current.contains(event.target)) {
+        close();
+      }
+    };
 
-    document.addEventListener('keydown', closeDropdownEsc);
-
+    window.addEventListener('keydown', closeDropdownEsc);
+    document.addEventListener('mousedown', handleClose);
     return () => {
-      document.removeEventListener('keydown', closeDropdownEsc);
+      window.removeEventListener('keydown', closeDropdownEsc);
+      document.addEventListener('mousedown', handleClose);
     };
   }, [close]);
 
-  return <DropdownStyled>{children}</DropdownStyled>;
+  return <DropdownStyled ref={formRef}>{children}</DropdownStyled>;
 };

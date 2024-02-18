@@ -9,25 +9,26 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import {
-  Btn,
+  BtnSearch,
   CustomArrow,
   Form,
   FormItemWrapper,
   FromTo,
   FromToContainer,
-  InvalidErrorMessage,
-  Label,
+  LabelTitle,
   MilageWrapper,
   MileageContainer,
-  Selector,
+  DropdownSelector,
   SelectorItem,
   SelectorWrapper,
+  InvalidMessage,
 } from './Filter.styled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const [searchParams, setSearchParams] = useSearchParams();
   const { brand, price, mileageFrom, mileageTo } = useSelector(selectFilters);
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [brandSelect, setBrandSelect] = useState(brand);
   const [priceSelect, setPriceSelect] = useState(price);
   const [mileageFromSelect, setMileageFromSelect] = useState(mileageFrom);
@@ -89,16 +90,16 @@ export const Filter = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <label>
-        <Label>Car brand</Label>
+        <LabelTitle>Car brand</LabelTitle>
         <SelectorWrapper>
-          <Selector
+          <DropdownSelector
             onClick={() => {
               setIsBrandDropdownOpen(!isBrandDropdownOpen);
             }}
             width="224px"
           >
             {brandSelect || 'Enter the text'}
-          </Selector>
+          </DropdownSelector>
           <CustomArrow $isOpen={isBrandDropdownOpen} />
           {isBrandDropdownOpen && (
             <Dropdown
@@ -123,14 +124,14 @@ export const Filter = () => {
         </SelectorWrapper>
       </label>
       <label>
-        <Label>Price/ 1 hour</Label>
+        <LabelTitle>Price/ 1 hour</LabelTitle>
         <SelectorWrapper>
-          <Selector
+          <DropdownSelector
             onClick={() => setIsPriceDropdownOpen(!isPriceDropdownOpen)}
             width="125px"
           >
             {`${priceSelect ? priceSelect : 'To'} $`}
-          </Selector>
+          </DropdownSelector>
           <CustomArrow $isOpen={isPriceDropdownOpen} />
           {isPriceDropdownOpen && (
             <Dropdown
@@ -155,7 +156,7 @@ export const Filter = () => {
         </SelectorWrapper>
       </label>
       <MileageContainer>
-        <Label>Car mileage / km</Label>
+        <LabelTitle>Car mileage / km</LabelTitle>
         <FromToContainer>
           <FormItemWrapper>
             <FromTo>From</FromTo>
@@ -180,12 +181,12 @@ export const Filter = () => {
           </FormItemWrapper>
         </FromToContainer>
         {!isValid && (
-          <InvalidErrorMessage>
+          <InvalidMessage>
             'To' value should be equal to or greater than 'From'.
-          </InvalidErrorMessage>
+          </InvalidMessage>
         )}
       </MileageContainer>
-      <Btn disabled={!isValid}>Search</Btn>
+      <BtnSearch disabled={!isValid}>Search</BtnSearch>
     </Form>
   );
 };

@@ -4,6 +4,7 @@ import { fetchByBrandThunk, getCarsThunk } from './operation';
 const carsInitialState = {
   cars: [],
   favorites: [],
+  page: 1,
   isLoading: false,
   isFavorited: false,
   error: null,
@@ -35,8 +36,12 @@ const advertsSlice = createSlice({
         );
       },
     },
+    loadPage(state) {
+      state.page = state.page + 1;
+    },
     resetStateCars: {
       reducer(state) {
+        state.page = 1;
         state.cars = [];
       },
     },
@@ -64,6 +69,6 @@ const advertsSlice = createSlice({
       ),
 });
 
-export const { addFavoriteCar, deleteFavoriteCar, resetStateCars } =
+export const { addFavoriteCar, deleteFavoriteCar, resetStateCars, loadPage } =
   advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;
