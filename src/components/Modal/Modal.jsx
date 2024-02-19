@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 import React, { useEffect, useRef } from 'react';
 import { Backdrop, StyledModal, BtnClose, Container } from './Modal.styled';
-import closeIcon from '../../icons/close.svg';
+import closeIcon from '../../images/icons/close.svg';
 
 const modalRoot = document.querySelector('#root-modal');
 

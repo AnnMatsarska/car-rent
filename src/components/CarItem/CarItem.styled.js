@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as NormalHeart } from '../../icons/normalHeart.svg';
-import { ReactComponent as ActiveHeart } from '../../icons/activeHeart.svg';
+import { ReactComponent as NormalHeart } from '../../images/icons/normalHeart.svg';
+import { ReactComponent as ActiveHeart } from '../../images/icons/activeHeart.svg';
 
 export const Item = styled.li`
   display: block;

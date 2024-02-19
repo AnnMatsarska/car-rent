@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { ReactComponent as Arrow } from '../../icons/arrow.svg';
+import { ReactComponent as Arrow } from '../../images/icons/arrow.svg';
 
 export const Form = styled.form`
   margin-top: 40px;
