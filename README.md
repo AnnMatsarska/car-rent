@@ -2,6 +2,8 @@
 
 ## About the project:
 
+![Main page screenshot](./src/images/mainPage.png)
+
 This rental service application is written in JS in combination with React JS
 and allows users to browse a catalog of available cars, save preferred vehicles,
 and apply filters for a more personalized search experience. Designed to provide
